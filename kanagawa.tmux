@@ -45,7 +45,7 @@ local theme
   set status-right-length "100"
 
   # messages
-  set message-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
+  set message-style "fg=${thm_black},bg=${thm_magenta},align=centre"
   set message-command-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
 
   # panes
@@ -96,11 +96,11 @@ local theme
 
   local show_directory_in_window_status
   #readonly show_directory_in_window_status="#[fg=$thm_bg,bg=$thm_blue] #I #[fg=$thm_fg,bg=$thm_gray] #{b:pane_current_path} "
-  readonly show_directory_in_window_status="#[fg=$thm_bg,bg=$thm_blue] #I #[fg=$thm_fg,bg=$thm_gray] #W "
+  readonly show_directory_in_window_status="#[fg=$thm_bg,bg=$thm_gray] #I #[fg=$thm_fg,bg=color237] #W "
 
   local show_directory_in_window_status_current
   #readonly show_directory_in_window_status_current="#[fg=$thm_bg,bg=$thm_orange] #I #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} "
-  readonly show_directory_in_window_status_current="#[fg=colour232,bg=$thm_orange] #I #[fg=colour255,bg=colour237] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) "
+  readonly show_directory_in_window_status_current="#[fg=colour232,bg=$thm_orange] #I #[fg=colour250,bg=colour237] #(cd '#{pane_current_path}' && dirs +0) "
 
   local show_window_in_window_status
   readonly show_window_in_window_status="#[fg=$thm_fg,bg=$thm_bg] #W #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]$left_separator#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
